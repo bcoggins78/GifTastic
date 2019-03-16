@@ -1,2 +1,2 @@
 # GifTastic
-UNC Coding BootCamp Week 6 Homework
+UNC Coding BootCamp Week 6 Homework Project
