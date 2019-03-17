@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
     // Array of TV Shows.
-    var topics = ["Game of Thrones", "Stargate", "The IT Crowd", "The Walking Dead", "Dr. Who", "Red Dwarf", "The Expanse", "The Sopranos", "Sons of Anarchy", "Babylon 5", "Breaking Bad", "Battlestar Galactica", "Fringe", "Cobra Kai", "Mr. Robot", "Star Trek", "The Office", "The Orville", "Family Guy", "Seinfield", "Voltron"]
+    var topics = ["Game of Thrones", "Stargate", "The IT Crowd", "Stranger Things", "The Walking Dead", "Dr. Who", "Red Dwarf", "The Expanse", "The Sopranos", "Sons of Anarchy", "Babylon 5", "Breaking Bad", "Band of Brothers", "The Punisher", "DareDevil", "Battlestar Galactica", "Fringe", "Cobra Kai", "Mr. Robot", "Star Trek", "The Office", "The Orville", "Family Guy", "Seinfield", "Voltron"]
 
     // Display buttons for tv shows
     var showButtons = function () {
@@ -12,7 +12,7 @@ $(document).ready(function () {
 
             var newButton = $("<button>")
             newButton.attr("data-name", topics[i]);
-            newButton.addClass("tvshow");
+            newButton.addClass("tvshow btn btn-info float-left");
             newButton.text(topics[i]);
             $("#tv-display").append(newButton);
 
@@ -56,14 +56,17 @@ $(document).ready(function () {
 
                     // Div, img, and p elements created. Attributes difined so the later if statement can change the animate / still state.
                     // Image and P elements appeneded to id gif-display.
-                    var imageDiv = $("<div>"); 
+                    var imageDiv = $("<div>");
+                    // imageDiv.addClass("card-body");
                     var p = $("<p>").text("Rating: " + results[i].rating); 
+                    // p.addClass("float-left");
                     var tvImage = $("<img>"); 
                     tvImage.attr("src", results[i].images.fixed_height_still.url); 
                     tvImage.attr("data-still", results[i].images.fixed_height_still.url); 
-                    tvImage.attr("data-state", "still") 
+                    tvImage.attr("data-state", "still");
                     tvImage.addClass("tvshow-image"); 
                     tvImage.attr("data-animate", results[i].images.fixed_height.url);
+                    imageDiv.addClass("float-left image-div");
                     imageDiv.append(p);
                     imageDiv.append(tvImage);
                     $("#gif-display").append(imageDiv);

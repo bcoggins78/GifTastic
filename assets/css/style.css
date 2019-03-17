@@ -1,0 +1,27 @@
+body {
+    background: url("../images/tvscreen.png");
+    background-size: 88%;
+    background-attachment: fixed;
+    margin:0;
+}
+
+.tvshow {
+    margin: 2px;
+}
+
+#tv-form {
+    margin: 2px;
+}
+
+.image-div {
+    margin:15px;
+}
+
+.container {
+    background: rgba(26, 26, 26, 0.85);
+
+}
+
+#gif-display {
+    color: white;
+}
